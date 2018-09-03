@@ -28,4 +28,18 @@ h1 {
 
 img {
   border-radius: 50px;
+  max-width: 80%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cat-box {
+  width:40%;
+  float: left;
+  justify-content: center;
 }
