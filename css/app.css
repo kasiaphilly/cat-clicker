@@ -43,3 +43,11 @@ img {
   float: left;
   justify-content: center;
 }
+
+ul.cats {
+  list-style-type: circle;
+}
+
+li:hover {
+  cursor: pointer;
+}

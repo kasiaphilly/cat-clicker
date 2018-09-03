@@ -1,6 +1,26 @@
 const wrapper = document.querySelector(".wrapper");
 let catNumber = 0;
 
+const allCats = ["Sam", "Bob", "Joe", "Andy", "Tom"];
+const allCatPics = ["img/kitten.jpg", "img/kitten2.jpg", "img/kitten3.jpg", "img/kitten4.jpg", "img/kitten5.jpg"];
+
+const catList = document.querySelector(".cats");
+
+function createCatList(){
+    for (let i=0; i<allCats.length; i++) {
+    const myNewCat = document.createElement("LI");
+    myNewCat.classList.add("catName");
+    myNewCat.insertAdjacentHTML("afterbegin",
+    `${allCats[i]}`);
+    catList.appendChild(myNewCat);
+
+    myNewCat.addEventListener('click', function(){
+      newCat(allCats[i], allCatPics[i]);
+    });
+  };
+}
+
+
 // function creating a cat div
 function newCat(name, image) {
     const catCard = document.createElement("DIV");
@@ -29,5 +49,4 @@ function newCat(name, image) {
     }, false);
   }
 
-newCat ("sam", "img/kitten.jpg");
-newCat ("bob", "img/kitten2.jpg");
+createCatList();
